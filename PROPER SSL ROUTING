@@ -1,0 +1,5 @@
+RewriteCond %{HTTP_HOST} ^my-site-name.com [NC]
+RewriteRule ^(.*)$ https://www.my-site-name.com/$1 [L,R=301,NC]
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.my-site-name.com/$1 [R=301,L]
